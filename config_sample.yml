@@ -1,0 +1,20 @@
+# update interval in seconds
+update_interval: 86400 # 60 * 60 * 24 = once a day
+
+# notification service. gotify for now
+notification_service:
+  type: "gotify"
+  url: "https://your.gotify.server/message?token=your_token"
+
+# sites to watch for changes
+sites:
+  # the name of the application
+  - name: "Gotify Server"
+    # the url to watch for changes
+    url: "https://github.com/gotify/server/releases"
+
+    # the CSS selector to watch for changes
+    selector: ".label-latest a.muted-link span"
+
+    # selector used for notification service description
+    notification_selector: ".label-latest a.muted-link span"
